@@ -1,0 +1,519 @@
+/* For mobile phones: */
+
+/* We should use a mobile first approach having out breack point at 960px */
+
+/* For mobile phones: */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+img,
+video {
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+}
+
+.main-nav__container {
+  height: 100%;
+}
+
+/* =========== MAIN-NAV MOBILE ============ */
+.main-nav {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 75px;
+  overflow-x: hidden;
+  transition: all 0.5s;
+}
+
+.main-nav--colored {
+  background-color: rgba(0, 60, 143, 0.8);
+}
+
+.main-nav__logo {
+  position: absolute;
+  top: 11px;
+  left: 20px;
+  transition: opacity 0.2s ease-in;
+  opacity: 0;
+  width: 89px;
+}
+
+.main-nav__logo.main-nav__logo--visible {
+  opacity: 1;
+}
+
+.main-nav__burguer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.main-nav__burguer-bar {
+  width: 40px;
+  height: 6px;
+  background-color: white;
+  border-radius: 1px;
+  transition: 0.5s;
+}
+
+.burguer__bar-1,
+.burguer__bar-2 {
+  margin-bottom: 8px;
+}
+
+.burguer-animation .burguer__bar-1 {
+  transform: translate(0px, 6px) rotate(-45deg);
+  transform-origin: center center;
+  margin: 0;
+}
+
+.burguer-animation .burguer__bar-2 {
+  opacity: 0;
+}
+
+.burguer-animation .burguer__bar-3 {
+  transform: translate(0px, -14px) rotate(45deg);
+  transform-origin: center center;
+}
+
+.main-nav__menu-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.main-nav__menu-link {
+  color: white;
+  font-size: 30px;
+  line-height: 2;
+  text-decoration: none;
+}
+
+.main-nav--overlay {
+  height: 100%;
+  background-color: rgba(0, 60, 143, 0.8);
+}
+
+.main-nav__menu-items-animation {
+  height: 100vh;
+  opacity: 1;
+}
+
+/* =========== MAIN-NAV DESKTOP ============ */
+@media screen and (min-width: 960px) {
+  .main-nav {
+    height: 80px;
+  }
+
+  .main-nav .container {
+    padding: 0;
+  }
+
+  .main-nav__burguer {
+    display: none;
+  }
+
+  .main-nav__menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-left: 100px;
+  }
+
+  .main-nav__menu-items {
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0px 182px 0px 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    list-style-type: none;
+    overflow: hidden;
+  }
+
+  .main-nav__menu-link {
+    margin: 0px 30px;
+    font-size: 22px;
+    line-height: 1;
+  }
+}
+
+.non-scroll {
+  overflow: hidden;
+}
+
+/* For mobile phones: */
+.button {
+  font-weight: normal;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  display: inline-block;
+  border-radius: 4px;
+  overflow: hidden;
+  color: white;
+  border: 0;
+  text-align: center;
+  padding: 17px;
+  text-decoration: none;
+}
+.button:focus {
+  outline: 0;
+}
+
+.button--sm {
+  min-width: 150px;
+  height: 30px;
+  font-size: 12px;
+}
+
+.button--md {
+  min-width: 200px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.button--lg {
+  min-width: 280px;
+  height: 60px;
+  font-size: 22px;
+}
+
+.button--primary {
+  background-color: #29b6f6;
+}
+
+.button--primary-light {
+  background-color: #73e8ff;
+}
+
+.button--primary-dark {
+  background-color: #0086c3;
+}
+
+.button--secondary {
+  background-color: #1565c0;
+}
+
+.button--secondary-light {
+  background-color: #5e92f3;
+}
+
+.button--secondary-dark {
+  background-color: #003c8f;
+}
+
+/* Small hero */
+.small-hero__image--quote {
+  background: url("../assets/images/homepage_hero.jpg") no-repeat center;
+}
+.small-hero__image--contact {
+  background: url("../assets/images/hdlp_12.JPG") no-repeat center;
+}
+.small-hero__image--gallery {
+  background: url("../assets/images/hdlp_11.JPG") no-repeat center;
+}
+
+.small-hero {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  padding: 0 20px;
+}
+
+.small-hero__layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 60, 143, 0.5);
+  top: 0px;
+  left: 0;
+}
+
+.small-hero__layer--darker {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.small-hero__title {
+  font-weight: bold;
+  position: absolute;
+  font-size: 40px;
+  color: white;
+  bottom: 30px;
+  margin-bottom: 0;
+}
+
+/* End small hero */
+
+/* Carrousel */
+
+.carrousel-section {
+  margin: 0 0 70px;
+  padding: 0 20px;
+}
+
+.carrousel-container {
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.info {
+  margin-bottom: 28px;
+}
+
+.info__title {
+  font-weight: bold;
+}
+
+.info-line {
+  width: 90px;
+  height: 1px;
+  margin-left: 0;
+  background-color: #63ccff;
+  border: 0;
+}
+
+.carrousel {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.carrousel__img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carrousel__arrow {
+  bottom: 0;
+  height: 32px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.carrousel__arrow--right {
+  transform: rotateY(180deg);
+  right: 10px;
+}
+
+.carrousel__arrow--left {
+  left: 10px;
+}
+
+.pointer-list {
+  display: block;
+  margin: 20px 0px 50px;
+  list-style-type: disc;
+}
+
+.pointer-list__oval:last-child {
+  margin-right: 0;
+}
+
+.pointer-list__oval {
+  border-radius: 50%;
+  margin-right: 22px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+}
+
+.pointer-list__oval--gray {
+  background-color: rgba(51, 51, 51, 0.3);
+}
+
+.pointer-list__oval--black {
+  background-color: #333333;
+}
+
+.pointer-section {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+/* End carrousel*/
+
+/* For desktop */
+@media only screen and (min-width: 960px) {
+  .button {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+  }
+
+  .carrousel-container {
+    margin-bottom: 33px;
+  }
+
+  .carrousel__arrow {
+    height: 62px;
+    width: 40px;
+  }
+
+  .carrousel__arrow--right {
+    right: 32px;
+  }
+
+  .carrousel__arrow--left {
+    left: 32px;
+  }
+
+  .pointer-list {
+    margin-bottom: 60px;
+  }
+
+  .pointer-list__oval {
+    margin-left: 14.6;
+    margin-right: 14.6;
+  }
+
+  .button--lg {
+    min-width: 320px;
+    height: 60px;
+    font-size: 22px;
+  }
+
+  .carrousel-section {
+    margin-bottom: 90px;
+  }
+
+  .button--md {
+    min-width: 200px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .button--sm {
+    min-width: 150px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .button--primary:hover {
+    background-color: #0086c3;
+  }
+
+  .button--primary-dark:hover {
+    background-color: #29b6f6;
+  }
+
+  .button--secondary:hover {
+    background-color: #003c8f;
+  }
+
+  .button--secondary-dark:hover {
+    background-color: #1565c0;
+  }
+
+  .button--primary-light:hover {
+    background-color: #5e92f3;
+  }
+
+  /* Small hero */
+  .small-hero__title {
+    font-size: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 39px;
+    text-align: center;
+  }
+
+  .small-hero {
+    height: 300px;
+  }
+  /* End small hero */
+
+  /* desktop carrousel */
+  .container {
+    max-width: 960px;
+  }
+
+  .pointer-list {
+    margin: 33px 0px 60px;
+  }
+
+  .pointer-list__oval {
+    margin-right: 29.2px;
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Footer */
+  .footer__icon {
+    margin: 19px;
+  }
+
+  .info {
+    width: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .info__title {
+    width: 227px;
+    height: 24px;
+    font-size: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .info__description {
+    width: 428px;
+    height: 38px;
+    font-size: 16px;
+    display: inline-block;
+  }
+}

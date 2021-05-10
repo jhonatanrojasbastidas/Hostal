@@ -1,0 +1,19 @@
+# top-most EditorConfig file.
+root = true
+# Mathches all files.
+[*]
+end_of_line = lf
+insert_final_newline = true
+# remove whitespace at the end of lines.
+trim_trailing_whitespace = true
+# Set default charset.
+charset = utf-8
+# 2 space indentation.
+indent_style = space
+indent_size = 2
+max_line_length = null
+# dont remove whitespace at the end of lines in doc files.
+[*.{md,markdown}]
+trim_trailing_whitespace = false
+
+# EditorConfig is awesome: https://EditorConfig.org

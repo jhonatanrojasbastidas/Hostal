@@ -1,0 +1,287 @@
+/*For mobile phones: */
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.form__container {
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.form-options__subtitle {
+  height: 29px;
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 10px;
+  margin-block-start: 20px;
+}
+
+.paragraph {
+  height: 77px;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+/*
+ * In this code, i assign properties like border and color to the focused element.
+ */
+.form-field__input:focus,
+.form-field__textarea:focus {
+  outline: 1px rgba(0, 0, 0, 0.7);
+  border-bottom: 2px solid #29b6f6;
+}
+
+/*
+ * In this code, i assign properties to the element that is after to the class "form__input",
+ * in this case the class "form__label".
+ * Note: the order is established in the html.
+ */
+.form-field__input:focus + .form-field__label {
+  margin-top: -65px;
+  color: #29b6f6;
+}
+
+.form-field__input,
+.form-field__textarea {
+  border: 0;
+  border-bottom: 1px solid #9e9e9e;
+  font-size: 14px;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0);
+  margin-block-start: 20px;
+  margin-block-end: 20px;
+  display: block;
+  width: 100%;
+}
+
+.form-field__textarea {
+  height: 80px;
+}
+
+.form-field__label {
+  font-size: 12px;
+  position: absolute;
+  margin-top: -45px;
+  z-index: -20;
+  display: block;
+  width: inherit;
+  color: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s;
+}
+
+.form-field__textarea + .form-field__label {
+  margin-top: -116px;
+}
+
+.form-field__textarea:focus + .form-field__label {
+  color: #29b6f6;
+}
+
+.fix-label {
+  margin-top: -65px;
+}
+
+.form__options {
+  margin-top: 40px;
+}
+
+.form {
+  margin-bottom: 50px;
+}
+
+.form-options__label .form-options__checkbox {
+  display: none;
+}
+
+.form-options__label {
+  display: block;
+  padding-left: 35px;
+  position: relative;
+  user-select: none;
+  margin-block-start: 5px;
+  margin-block-end: 5px;
+  font-size: 14px;
+  font-weight: 300;
+  height: 25px;
+}
+
+.form-options__label .form-options__checkmark {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: solid 2px #979797;
+  border-radius: 1px;
+}
+
+/*
+ * In this code i assign the background color to class
+ * checkbox__container inputs that are selected.
+ */
+.form-options__label input:checked + .form-options__checkmark {
+  background-color: #1565c0;
+  border: solid 2px #1565c0;
+}
+
+/*
+ * In this code insert the figure "✓" after that a checkbox is selected; the figure is created
+ * assigning attributes and properties to the content.
+ */
+.form-options__label input:checked + .form-options__checkmark:after {
+  content: "";
+  position: absolute;
+  height: 7px;
+  width: 16px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  top: 38%;
+  left: 52%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.form__disclaimer {
+  height: 32px;
+  font-size: 14px;
+  font-weight: 300;
+  margin-block-start: 35px;
+  margin-block-end: 40px;
+}
+
+.form__quote {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  align-content: center;
+  white-space: pre-line;
+  margin-block-end: 66px;
+}
+
+.form-field__calendar {
+  background-image: url(../assets/icons/calendar.svg);
+  background-position: 95%;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+.sub-option {
+  left: 20px;
+}
+
+.list-errors__container {
+  display: flex;
+  justify-content: center;
+}
+
+.error__style {
+  border: 0;
+  border-bottom: 2px solid #e00f2d;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0);
+  margin-block-start: 20px;
+  margin-block-end: 20px;
+  display: block;
+  background-image: url(../assets/icons/warning.svg);
+  background-position: 95%;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+.form__error {
+  color: #e00f2d;
+  position: relative;
+  bottom: 15px;
+  width: 100%;
+  height: 13px;
+  font-size: 11px;
+  font-weight: 300;
+}
+
+.form__message--success {
+  display: block;
+  text-align: center;
+  text-align: center;
+  color: #4bb543;
+  font-size: 14px;
+  margin-block-end: 20px;
+}
+
+.button[disabled],
+.button[disabled]:hover {
+  color: gray;
+  background-color: #b4b3b3;
+}
+
+@media only screen and (min-width: 960px) {
+  /* For desktop: */
+  .flatpickr-day.selected.endRange {
+    border-radius: 0 50px 50px 0;
+  }
+
+  .form__quote {
+    white-space: nowrap;
+  }
+
+  .paragraph {
+    margin: 60px auto 0;
+    width: 635px;
+    display: block;
+  }
+
+  .error__style {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .form-field__input {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .form-field {
+    width: 100%;
+    margin: 0 10px;
+  }
+
+  .form-field:first-of-type {
+    margin-left: 0;
+  }
+
+  .form-field:last-of-type {
+    margin-right: 0;
+  }
+
+  .form__disclaimer {
+    width: 635px;
+    text-align: center;
+  }
+
+  .form-disclaimer__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .quote-button__container {
+    display: flex;
+    justify-content: center;
+    width: 320px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .row {
+    display: flex;
+    width: 100%;
+  }
+
+  .column {
+    flex-basis: calc(100% / 3);
+  }
+}
